@@ -43,6 +43,8 @@ app.use("/api/courses", require("./routes/courses"));
 app.use("/api/platforms", require("./routes/platforms"));
 app.use("/api/customer", require("./routes/customer"));
 app.use("/api/admin", require("./routes/admin"));
+app.use("/api/admin/coupons", require("./routes/adminCoupons"));
+app.use("/api/coupons", require("./routes/coupons"));
 app.use("/api/contact", require("./routes/contact"));
 app.use("/api/payment", require("./routes/payment"));
 app.use("/api/videos", require("./routes/videos"));
