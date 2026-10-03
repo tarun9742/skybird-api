@@ -1,0 +1,11 @@
+const express = require("express");
+const router = express.Router();
+const { protectAdmin } = require("../middleware/auth");
+const { getCoupons, createCoupon, updateCoupon, toggleCoupon, deleteCoupon } = require("../controllers/couponController");
+router.use(protectAdmin);
+router.get("/", getCoupons);
+router.post("/", createCoupon);
+router.put("/:id", updateCoupon);
+router.patch("/:id/toggle", toggleCoupon);
+router.delete("/:id", deleteCoupon);
+module.exports = router;
